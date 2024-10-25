@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from 'react'
 import './App.css'
 import axios from 'axios'
 import { InputSelect } from './components/InputSelect'
@@ -111,7 +109,7 @@ function App() {
             setWriting(e.target.value)
           }}/>
           <button type='submit' className='w-80 h-11 mt-12 text-yellow-50 rounded-xl bg-gray-950' onClick={()=>{
-            axios.post('http://localhost:5000/prediction',{
+            axios.post('https://student-perf-api-233954702154.us-central1.run.app/prediction',{
           
               "message":{
                 "gender": genderS,
